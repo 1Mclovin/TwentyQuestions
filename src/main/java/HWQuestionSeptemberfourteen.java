@@ -9,14 +9,21 @@ public class HWQuestionSeptemberfourteen {
     }
 
     //HW 9/14/21 question
-    public static String discountedProduct(double price, double discount){
+//    public static String discountedProduct(double price, double discount){
+//        double discountAmount= price * discount;
+//        double total = price-discountAmount;
+//        String  reciept = String.format (" price = %f "+"discount is %f \n" +
+//                " which means the total for today is %f\n",price,discount,total );
+//        return reciept;
+//
+//    }
+
+    public static double discountedProduct(double price, double discount){
         double discountAmount= price * discount;
         double total = price-discountAmount;
-        String  reciept = String.format (" price = %f "+"discount is %f \n" +
-                " which means the total for today is %f\n",price,discount,total );
-        return reciept;
+        //double reciept = Double.parseDouble(String.format (" price = %f "+"discount is %f \n" +
+        //           " which means the total for today is %f\n",price,discount,total ));
+        return total;
 
     }
-
-
 }
