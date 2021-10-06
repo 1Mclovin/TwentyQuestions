@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class TwentyQuestionsHW {
 
@@ -36,6 +35,21 @@ public class TwentyQuestionsHW {
 
         //Hw question 10
         System.out.println(contains(names,"Darren"));
+
+        //Hw question 11
+        System.out.println(getIndexByElement(names,"Deens"));
+
+        //Hw question 12
+       // System.out.println(printOddNumbersInRange(2,20));
+
+        // Hw question 13
+        System.out.println(printGivenStringTimesNumberGiven("raul",4));
+
+        //Hw question 14
+        System.out.println(repeatFirstThreeLetters("Testing",6));
+
+        //Hw question 15
+        System.out.println(wordsInAStringCounter("Hi this is a test and should print out 10"));
 
 
     }
@@ -112,7 +126,80 @@ public class TwentyQuestionsHW {
         return test;
     }
 
+    // Hw question 11
+//    Question 11
+//    public static int getIndexByElement(String[] names, String element) {
+//        return 0;
 
+    public static int getIndexByElement(String[]names, String element){
+
+       ArrayList<String>clist = new ArrayList<>();
+
+       for(String i : names)
+           clist.add(i);
+
+       return clist.indexOf(element);
+
+    }
+// hw Question 12
+//    Question 12
+//    public static void printOddNumbersInRange(int start, int end){
+//    }
+
+    public static void printOddNumbersInRange(int start, int end){
+
+        for (int i = start; i<=end;start++){
+            System.out.println(i %2!=0);
+
+        }
+    }
+//    Question 13
+//    public static String printGivenStringTimesNumberGiven(String str, int n) {
+//        return null;
+//    }
+
+    public static String printGivenStringTimesNumberGiven(String str, int n){
+
+        String r = str;
+        for(int i=0;i< n-1; i++)
+            r =r +" "+" "+ str;
+
+        return r;
+    }
+//    Question 14
+//    public static String repeatFirstThreeLetters(String str, int n) {
+//        return null;
+//    }
+
+    public static String repeatFirstThreeLetters(String str, int n){
+
+
+        String r = str;
+        for(int i=0;i< n-1; i++)
+            r =r +" "+" "+ str;
+
+        String onlyFirstThreeLetters = r.substring(0,3);
+
+        return r + System.lineSeparator()+ onlyFirstThreeLetters;
+
+    }
+
+//    Question 15
+//    // Write a java method to count all the words in a string
+//    public static int WordsInAStringCounter(String str){
+//        return null;
+
+    public static int wordsInAStringCounter(String str){
+
+        //this part is not really necessary but its a cool lil add on just in case there are no words typed
+        if(str == null|| str.isEmpty()){
+            return 0;
+        }
+
+        String [] words = str.split("\\s+");
+        return words.length;
+
+    }
 
     }
 
